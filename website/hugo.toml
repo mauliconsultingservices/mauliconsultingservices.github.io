@@ -13,12 +13,12 @@ disableKinds = ['taxonomy', 'term']
   priority = 1.0
 
 [params]
-  cssVersion = '4'
+  cssVersion = '5'
   description = 'Principal-level hands-on software engineering — distributed systems, full-stack, agentic AI (LangChain, LangGraph, RAG, MCP), Shopify, cloud-native. B2B retainers, remote from India.'
   tagline = 'Principal IC · distributed systems & full-stack'
   contactFormEndpoint = ''
-  contactMailbox = 'contact@mauliconsultingservices.com'
-  contactEmail = 'mb.mauliconsultingservices@gmail.com'
+  # Business inquiry mailto (contact@ when Cloudflare Email Routing is live)
+  contactMailbox = 'mb.mauliconsultingservices@gmail.com'
 
   [params.seo]
     titleHome = 'Mauli Consulting Services — Principal Software Engineering'
