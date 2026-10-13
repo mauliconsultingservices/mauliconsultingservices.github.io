@@ -402,7 +402,71 @@ main {
     padding: 0.85rem 1.25rem;
   }
 
-  .prose table {
+  /* Model / description tables: stack as cards (avoids crushed first column) */
+  .prose-table-wrap {
+    overflow: visible;
+  }
+
+  .prose-table-wrap table {
+    display: block;
+    width: 100%;
+    border: none;
+    margin: 0;
+    font-size: 0.875rem;
+  }
+
+  .prose-table-wrap thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .prose-table-wrap tbody {
+    display: block;
+  }
+
+  .prose-table-wrap tr {
+    display: block;
+    margin-bottom: 0.75rem;
+    padding: 0.85rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+
+  .prose-table-wrap tr:last-child {
+    margin-bottom: 0;
+  }
+
+  .prose-table-wrap td {
+    display: block;
+    border: none;
+    padding: 0;
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .prose-table-wrap td:first-child {
+    color: var(--text);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .prose-table-wrap td:last-child {
+    color: var(--muted);
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  /* Other tables in prose: scroll horizontally with a readable first column */
+  .prose > table {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -411,16 +475,22 @@ main {
     margin: 1rem 0;
   }
 
-  .prose table thead,
-  .prose table tbody {
+  .prose > table thead,
+  .prose > table tbody {
     display: table;
-    width: 100%;
-    min-width: 18rem;
+    width: max-content;
+    min-width: 100%;
   }
 
-  .prose th,
-  .prose td {
-    padding: 0.45rem 0.5rem;
-    word-break: break-word;
+  .prose > table th,
+  .prose > table td {
+    padding: 0.45rem 0.65rem;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .prose > table th:first-child,
+  .prose > table td:first-child {
+    min-width: 7.5rem;
   }
 }
