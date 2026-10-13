@@ -29,9 +29,12 @@
     "Cloud-native engineering"
     "Full-stack development"
     "AI application development"
+    "Agentic AI development"
+    "RAG systems"
+    "MCP server development"
     "E-commerce engineering"
   )
-  "knowsAbout" (slice "Kubernetes" "AWS" "LangChain" "LangGraph" "Shopify" "Go" "Java" "TypeScript" "React" "PostgreSQL")
+  "knowsAbout" (slice "Kubernetes" "AWS" "LangChain" "LangGraph" "RAG" "Model Context Protocol" "Agentic AI" "Shopify" "Go" "Java" "TypeScript" "React" "PostgreSQL")
 -}}
 {{- $data := dict "@context" "https://schema.org" "@graph" (slice $website $org) -}}
 <script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>

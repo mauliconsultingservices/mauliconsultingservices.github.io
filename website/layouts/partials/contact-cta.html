@@ -27,9 +27,13 @@
     <button class="button" type="submit">Send inquiry</button>
   </form>
   {{ else if $mailbox }}
-  <button class="button" type="button" id="mc-contact-open" data-mail="{{ $mailbox | base64Encode }}">Business inquiry</button>
-  <script src="{{ "js/contact.js" | relURL }}" defer></script>
+  <div class="cta-actions">
+    <button class="button" type="button" id="mc-contact-open" data-mail="{{ $mailbox | base64Encode }}">Business inquiry</button>
+  </div>
   {{ end }}
 
   <p class="cta-note">Best fit: full-time retainers with teams that budget for <strong>senior IC / staff-equivalent</strong> depth. We do not compete on commodity staff-augmentation rates.</p>
+  {{ if $mailbox }}
+  <script src="{{ "js/contact.js" | relURL }}" defer></script>
+  {{ end }}
 </section>

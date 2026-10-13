@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --bg: #0f1419;
   --surface: #1a2332;
@@ -149,26 +153,53 @@ main {
   font-weight: 600;
 }
 
-.prose table {
+.prose-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1rem 0;
+}
+
+.prose-table-wrap table {
+  margin: 0;
+}
+
+.prose table,
+.prose-table-wrap table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
   margin: 1rem 0;
 }
 
+.prose-table-wrap table {
+  margin: 0;
+}
+
 .prose th,
-.prose td {
+.prose td,
+.prose-table-wrap th,
+.prose-table-wrap td {
   border: 1px solid var(--border);
   padding: 0.5rem 0.75rem;
   text-align: left;
 }
 
-.prose th {
+.prose th,
+.prose-table-wrap th {
   background: var(--surface);
   color: var(--text);
 }
 
+#capabilities,
+#contact {
+  scroll-margin-top: 1.25rem;
+}
+
 .cta {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
   margin-top: 2.5rem;
   padding: 1.75rem;
   background: var(--surface);
@@ -181,10 +212,19 @@ main {
   font-size: 1.125rem;
 }
 
-.cta p {
+.cta-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin: 0 0 1.25rem;
-  color: var(--muted);
-  font-size: 0.9375rem;
+}
+
+.cta .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  max-width: 100%;
 }
 
 .button {
@@ -218,6 +258,7 @@ main {
   display: grid;
   gap: 1rem;
   max-width: 28rem;
+  margin: 0 0 1.25rem;
 }
 
 .contact-form .field label {
@@ -265,19 +306,27 @@ main {
 }
 
 .cta-note {
-  margin: 1.25rem 0 0;
+  margin: 0;
   font-size: 0.8125rem;
   color: var(--muted);
   max-width: 36rem;
+  width: 100%;
+  line-height: 1.55;
 }
 
 .cta-note strong {
   color: var(--text);
 }
 
-.fine-print a {
+.fine-print a,
+#footer-contact-link {
   color: var(--accent);
   text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
 }
 
 .fine-print a:hover {
@@ -308,4 +357,70 @@ main {
 .fine-print {
   margin-top: 1rem;
   opacity: 0.85;
+}
+
+@media (max-width: 40rem) {
+  .header-inner {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .brand {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .brand-text {
+    word-break: break-word;
+  }
+
+  .site-nav {
+    width: 100%;
+    gap: 1rem;
+    padding-top: 0.25rem;
+  }
+
+  .site-nav a {
+    padding: 0.35rem 0;
+    min-height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  main {
+    padding: 1.5rem 0 2.5rem;
+  }
+
+  .cta {
+    padding: 1.25rem;
+  }
+
+  .cta .button {
+    width: 100%;
+    max-width: 20rem;
+    min-height: 2.75rem;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .prose table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    font-size: 0.8125rem;
+    margin: 1rem 0;
+  }
+
+  .prose table thead,
+  .prose table tbody {
+    display: table;
+    width: 100%;
+    min-width: 18rem;
+  }
+
+  .prose th,
+  .prose td {
+    padding: 0.45rem 0.5rem;
+    word-break: break-word;
+  }
 }
