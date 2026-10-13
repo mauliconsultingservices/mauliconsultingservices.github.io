@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  {{ partial "head-meta.html" . }}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{ "/" | relURL }}">
+        <img class="brand-mark" src="{{ "img/mark.svg" | relURL }}" width="36" height="36" alt="">
+        <span class="brand-text">{{ .Site.Title }}</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#capabilities">Capabilities</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <p class="tagline wrap">{{ .Site.Params.tagline }}</p>
+  </header>
+  <main id="main" class="wrap">
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="legal">India · International B2B · Software engineering services</p>
+      <p class="fine-print"><a href="#contact">Contact</a> · © {{ now.Year }} Mauli Consulting Services</p>
+    </div>
+  </footer>
+</body>
+</html>

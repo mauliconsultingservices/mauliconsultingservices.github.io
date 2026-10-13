@@ -1,0 +1,38 @@
+{{- if .IsHome -}}
+{{- $desc := .Description | default .Site.Params.description -}}
+{{- $pageURL := .Permalink -}}
+{{- $siteURL := strings.TrimSuffix "/" .Site.BaseURL -}}
+{{- $website := dict
+  "@type" "WebSite"
+  "@id" (printf "%s/#website" $siteURL)
+  "url" $pageURL
+  "name" .Site.Title
+  "description" $desc
+  "inLanguage" (.Site.Language.Lang | default "en")
+-}}
+{{- $org := dict
+  "@type" "ProfessionalService"
+  "@id" (printf "%s/#organization" $siteURL)
+  "name" .Site.Title
+  "url" (printf "%s/" $siteURL)
+  "description" $desc
+  "areaServed" (slice
+    (dict "@type" "Country" "name" "United States")
+    (dict "@type" "Country" "name" "United Kingdom")
+    (dict "@type" "Place" "name" "European Union")
+    (dict "@type" "Country" "name" "Australia")
+    (dict "@type" "Country" "name" "New Zealand")
+  )
+  "serviceType" (slice
+    "Software engineering"
+    "Distributed systems development"
+    "Cloud-native engineering"
+    "Full-stack development"
+    "AI application development"
+    "E-commerce engineering"
+  )
+  "knowsAbout" (slice "Kubernetes" "AWS" "LangChain" "LangGraph" "Shopify" "Go" "Java" "TypeScript" "React" "PostgreSQL")
+-}}
+{{- $data := dict "@context" "https://schema.org" "@graph" (slice $website $org) -}}
+<script type="application/ld+json">{{ $data | jsonify | safeJS }}</script>
+{{- end -}}

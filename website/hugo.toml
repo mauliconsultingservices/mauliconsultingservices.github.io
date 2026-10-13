@@ -1,0 +1,29 @@
+# Org GitHub Pages: https://github.com/mauliconsultingservices/mauliconsultingservices.github.io
+baseURL = 'https://mauliconsultingservices.github.io/'
+title = 'Mauli Consulting Services'
+enableRobotsTXT = true
+disableKinds = ['taxonomy', 'term']
+
+[languages.en]
+  locale = 'en-us'
+  weight = 1
+
+[sitemap]
+  changefreq = 'monthly'
+  priority = 1.0
+
+[params]
+  description = 'Principal-level hands-on software engineering — distributed systems, full-stack, LangChain/LangGraph, Shopify, cloud-native. B2B retainers, remote from India.'
+  tagline = 'Principal IC · distributed systems & full-stack'
+  contactFormEndpoint = ''
+  contactMailbox = 'contact@mauliconsultingservices.com'
+  contactEmail = 'mb.mauliconsultingservices@gmail.com'
+
+  [params.seo]
+    titleHome = 'Mauli Consulting Services — Principal Software Engineering'
+    # Optional absolute URL after you add static/img/og.png (1200×630)
+    ogImage = ''
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

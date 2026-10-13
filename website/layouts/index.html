@@ -1,0 +1,12 @@
+{{ define "main" }}
+<article class="home">
+  <section class="hero" aria-labelledby="hero-title">
+    <h1 id="hero-title">Principal software engineering for product teams</h1>
+    <p class="lead">Selective full-time retainers · Senior IC depth · Remote from India</p>
+  </section>
+  <div id="capabilities" class="content prose">
+    {{ .Content }}
+  </div>
+  {{ partial "contact-cta.html" . }}
+</article>
+{{ end }}
