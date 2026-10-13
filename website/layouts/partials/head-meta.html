@@ -29,5 +29,5 @@
 {{- end }}
 <meta name="twitter:title" content="{{ $title }}">
 <meta name="twitter:description" content="{{ $desc }}">
-<link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+<link rel="stylesheet" href="{{ printf "css/main.css?v=%s" (.Site.Params.cssVersion | default "1") | relURL }}">
 {{ partial "json-ld.html" . }}

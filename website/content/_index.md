@@ -28,11 +28,20 @@ Over **12+ years** shipping production software: multi-tenant SaaS, integration 
 
 ## How we work
 
-| Model | Description |
-|-------|-------------|
-| **Monthly retainer** | Dedicated **full-time IC** capacity; initial term typically **3–6 months**; priced for **principal/staff-level** impact, not commodity hourly bodies |
-| **Time & materials** | Hourly rate with a monthly cap, defined in a statement of work |
-| **Fixed SOW** | Bounded migration, audit, or build phase |
+<div class="engagement-models" role="list">
+  <div class="engagement-model" role="listitem">
+    <p class="engagement-model__title"><strong>Monthly retainer</strong></p>
+    <p class="engagement-model__body">Dedicated <strong>full-time IC</strong> capacity; initial term typically <strong>3–6 months</strong>; priced for <strong>principal/staff-level</strong> impact, not commodity hourly bodies</p>
+  </div>
+  <div class="engagement-model" role="listitem">
+    <p class="engagement-model__title"><strong>Time &amp; materials</strong></p>
+    <p class="engagement-model__body">Hourly rate with a monthly cap, defined in a statement of work</p>
+  </div>
+  <div class="engagement-model" role="listitem">
+    <p class="engagement-model__title"><strong>Fixed SOW</strong></p>
+    <p class="engagement-model__body">Bounded migration, audit, or build phase</p>
+  </div>
+</div>
 
 - **Timezone:** India (IST) — overlap with US business hours, EU afternoons, and Australia/New Zealand mornings  
 - **Commercial:** Master services agreement + statement of work (invoicing and payment per SOW); mutual NDA when needed; tax documentation for overseas clients (e.g. US W-8) when required  

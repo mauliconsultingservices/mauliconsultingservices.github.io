@@ -195,6 +195,53 @@ main {
   scroll-margin-top: 1.25rem;
 }
 
+.engagement-models {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0 1.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.engagement-model {
+  padding: 0.85rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.engagement-model__title {
+  margin: 0 0 0.35rem;
+  color: var(--text);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.engagement-model__body {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.engagement-model__body strong {
+  color: var(--text);
+}
+
+@media (min-width: 40rem) {
+  .engagement-model {
+    display: grid;
+    grid-template-columns: minmax(9rem, 11rem) 1fr;
+    gap: 0.75rem 1.25rem;
+    align-items: start;
+  }
+
+  .engagement-model__title {
+    margin: 0;
+  }
+}
+
 .cta {
   display: flex;
   flex-direction: column;

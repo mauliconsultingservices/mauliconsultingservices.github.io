@@ -13,6 +13,7 @@ disableKinds = ['taxonomy', 'term']
   priority = 1.0
 
 [params]
+  cssVersion = '3'
   description = 'Principal-level hands-on software engineering — distributed systems, full-stack, agentic AI (LangChain, LangGraph, RAG, MCP), Shopify, cloud-native. B2B retainers, remote from India.'
   tagline = 'Principal IC · distributed systems & full-stack'
   contactFormEndpoint = ''
