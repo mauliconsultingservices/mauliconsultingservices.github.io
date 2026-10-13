@@ -34,6 +34,6 @@
 
   <p class="cta-note">Best fit: full-time retainers with teams that budget for <strong>senior IC / staff-equivalent</strong> depth. We do not compete on commodity staff-augmentation rates.</p>
   {{ if $mailbox }}
-  <script src="{{ "js/contact.js" | relURL }}" defer></script>
+  <script src="{{ printf "js/contact.js?v=%s" (.Site.Params.cssVersion | default "1") | relURL }}" defer></script>
   {{ end }}
 </section>
